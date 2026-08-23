@@ -1,40 +1,857 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Fundația Nicoleta | Îngrijire seniori, rezidență premium și servicii dedicate</title>
+<title>Fundația Nicoleta | Îngrijire seniori și rezidență premium</title>
 
-  <meta name="description" content="Fundația Nicoleta oferă servicii integrate pentru seniori: îngrijire la domiciliu Seniori Acasă, Rezidența Seniorilor Sfântul Laurențiu și soluții specializate Shop Seniori.">
+<meta name="description" content="Fundația Nicoleta oferă servicii integrate pentru seniori: îngrijire la domiciliu, Rezidența Seniorilor Sfântul Laurențiu și soluții specializate Shop Seniori.">
+<meta name="robots" content="index, follow">
 
-  <meta name="robots" content="index,follow">
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-  <link rel="canonical" href="https://www.fundatianicoleta.ro/">
+html{
+    scroll-behavior:smooth;
+}
 
-  <meta name="theme-color" content="#08271f">
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f8f5ee;
+    color:#17211d;
+    line-height:1.6;
+}
 
-  <style>
-    :root {
-      --green: #08271f;
-      --green2: #0e382d;
-      --green3: #16483a;
-      --cream: #f6f1e7;
-      --cream2: #ede5d6;
-      --gold: #a88449;
-      --gold2: #c4a367;
-      --ink: #18221e;
-      --muted: #657069;
-      --white: #ffffff;
-      --border: rgba(23, 33, 29, .12);
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:#06261d;
+    color:#fff;
+    text-align:center;
+    padding:10px 15px;
+    font-size:14px;
+    letter-spacing:.02em;
+}
+
+/* HEADER */
+
+header{
+    background:#fff;
+    border-bottom:1px solid #e3ddd2;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.nav{
+    min-height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:52px;
+    height:52px;
+    border:1px solid #b7965d;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:Georgia,serif;
+    font-size:30px;
+    color:#17372d;
+}
+
+.brand-text strong{
+    display:block;
+    font-family:Georgia,serif;
+    font-size:20px;
+}
+
+.brand-text span{
+    display:block;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    color:#6c746f;
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    font-size:14px;
+}
+
+.menu a:hover{
+    color:#92713d;
+}
+
+.contact-btn{
+    background:#17372d;
+    color:#fff!important;
+    padding:12px 20px;
+    border-radius:30px;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(90deg,rgba(5,32,24,.96),rgba(5,32,24,.82)),
+    linear-gradient(135deg,#17372d,#081812);
+    color:#fff;
+    padding:105px 0 90px;
+}
+
+.eyebrow{
+    color:#d7bc84;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-family:Georgia,serif;
+    font-weight:normal;
+    font-size:clamp(44px,7vw,82px);
+    line-height:1.02;
+    max-width:850px;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:720px;
+    font-size:19px;
+    color:#e8ece9;
+    margin-bottom:32px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn-primary,
+.btn-secondary{
+    display:inline-block;
+    padding:14px 23px;
+    border-radius:30px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.btn-primary{
+    background:#d3b474;
+    color:#10251e;
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.6);
+    color:#fff;
+}
+
+/* TRUST BAR */
+
+.trustbar{
+    background:#fff;
+    border-bottom:1px solid #e5dfd5;
+}
+
+.trustgrid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.trustitem{
+    padding:24px 20px;
+    border-right:1px solid #e8e2d8;
+}
+
+.trustitem:last-child{
+    border-right:none;
+}
+
+.trustitem strong{
+    display:block;
+    color:#17372d;
+    font-size:17px;
+}
+
+.trustitem span{
+    color:#6f7772;
+    font-size:13px;
+}
+
+/* SECTIONS */
+
+.section{
+    padding:90px 0;
+}
+
+.section-soft{
+    background:#eee9de;
+}
+
+.section-dark{
+    background:#102c23;
+    color:#fff;
+}
+
+.section-title{
+    max-width:760px;
+    margin-bottom:45px;
+}
+
+.section-title span{
+    color:#9c7b45;
+    text-transform:uppercase;
+    font-size:12px;
+    letter-spacing:.17em;
+    font-weight:bold;
+}
+
+.section-title h2{
+    font-family:Georgia,serif;
+    font-size:clamp(34px,5vw,55px);
+    line-height:1.1;
+    font-weight:normal;
+    margin:12px 0 18px;
+}
+
+.section-title p{
+    color:#65706a;
+    font-size:17px;
+}
+
+.section-dark .section-title p{
+    color:#d7dfdb;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#fff;
+    padding:34px;
+    border:1px solid #e1dbd0;
+    border-radius:6px;
+}
+
+.number{
+    color:#aa8750;
+    font-family:Georgia,serif;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.card h3{
+    font-family:Georgia,serif;
+    font-size:27px;
+    color:#17372d;
+    margin-bottom:14px;
+}
+
+.card p{
+    color:#65706a;
+    margin-bottom:20px;
+}
+
+.card a{
+    color:#8c6b36;
+    font-weight:bold;
+}
+
+/* PHILOSOPHY */
+
+.philosophy{
+    background:#d8c39b;
+    padding:85px 0;
+}
+
+.philosophy blockquote{
+    max-width:950px;
+    font-family:Georgia,serif;
+    font-size:clamp(32px,5vw,57px);
+    line-height:1.15;
+    color:#17372d;
+}
+
+/* TWO COLUMN */
+
+.grid2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:65px;
+    align-items:center;
+}
+
+.big-title{
+    font-family:Georgia,serif;
+    font-size:clamp(34px,5vw,55px);
+    font-weight:normal;
+    line-height:1.08;
+    margin-bottom:25px;
+}
+
+.text{
+    font-size:17px;
+    color:#d6dfda;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.feature{
+    border-top:1px solid rgba(255,255,255,.25);
+    padding:18px 0;
+}
+
+.feature strong{
+    display:block;
+    color:#d8bc82;
+    margin-bottom:4px;
+}
+
+.feature span{
+    font-size:14px;
+    color:#d7dfdb;
+}
+
+/* ABOUT */
+
+.about-box{
+    border-left:3px solid #b8975e;
+    padding-left:30px;
+}
+
+.about-box p{
+    font-size:18px;
+    color:#56615b;
+    margin-bottom:17px;
+}
+
+/* VALUES */
+
+.values{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.value{
+    background:#fff;
+    padding:30px 22px;
+    border:1px solid #ddd7cc;
+}
+
+.value h3{
+    font-family:Georgia,serif;
+    color:#17372d;
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.value p{
+    font-size:14px;
+    color:#66706b;
+}
+
+/* CTA */
+
+.cta{
+    background:#c6a96e;
+    padding:75px 0;
+    text-align:center;
+}
+
+.cta h2{
+    font-family:Georgia,serif;
+    color:#102c23;
+    font-size:clamp(35px,5vw,55px);
+    margin-bottom:16px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 28px;
+    color:#263b33;
+    font-size:17px;
+}
+
+.cta a{
+    display:inline-block;
+    background:#102c23;
+    color:#fff;
+    padding:15px 28px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#071b15;
+    color:#d8e0dc;
+    padding:55px 0 30px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:45px;
+}
+
+footer h3{
+    font-family:Georgia,serif;
+    color:#fff;
+    margin-bottom:14px;
+}
+
+footer p,
+footer a{
+    font-size:14px;
+    color:#bfc9c4;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:40px;
+    padding-top:22px;
+    font-size:12px;
+    color:#8f9c96;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .nav{
+        min-height:75px;
     }
 
-    * {
-      box-sizing: border-box;
+    .brand-text strong{
+        font-size:17px;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .brand-text span{
+        font-size:9px;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    .hero{
+        padding:75px 0 65px;
+    }
+
+    .hero h1{
+        font-size:47px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .trustgrid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .trustitem:nth-child(2){
+        border-right:none;
+    }
+
+    .cards,
+    .grid2,
+    .values,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:65px 0;
+    }
+
+    .grid2{
+        gap:35px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .philosophy{
+        padding:65px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    Fundația Nicoleta · servicii integrate pentru seniori
+</div>
+
+<header>
+<div class="container nav">
+
+    <a class="brand" href="/">
+        <div class="logo">N</div>
+        <div class="brand-text">
+            <strong>Fundația Nicoleta</strong>
+            <span>Grijă · demnitate · continuitate</span>
+        </div>
+    </a>
+
+    <nav class="menu">
+        <a href="#despre">Despre noi</a>
+        <a href="#servicii">Seniori Acasă</a>
+        <a href="#rezidenta">Rezidență</a>
+        <a href="#shop">Shop Seniori</a>
+        <a href="#contact" class="contact-btn">Contact</a>
+    </nav>
+
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container">
+
+    <div class="eyebrow">Fundația Nicoleta</div>
+
+    <h1>Grija care rămâne aproape, în fiecare etapă.</h1>
+
+    <p>
+        De la sprijinul oferit acasă, la o rezidență premium și soluții
+        specializate pentru îngrijire — construim continuitate, siguranță
+        și liniște pentru seniori și familiile lor.
+    </p>
+
+    <div class="buttons">
+        <a class="btn-primary" href="#servicii">Găsește soluția potrivită</a>
+        <a class="btn-secondary" href="#despre">Descoperă Fundația</a>
+    </div>
+
+</div>
+</section>
+
+<div class="trustbar">
+<div class="container trustgrid">
+
+    <div class="trustitem">
+        <strong>Seniori Acasă</strong>
+        <span>Îngrijire la domiciliu</span>
+    </div>
+
+    <div class="trustitem">
+        <strong>Sfântul Laurențiu</strong>
+        <span>Rezidență boutique premium</span>
+    </div>
+
+    <div class="trustitem">
+        <strong>Shop Seniori</strong>
+        <span>Soluții și produse specializate</span>
+    </div>
+
+    <div class="trustitem">
+        <strong>Îngrijire integrată</strong>
+        <span>Un ecosistem dedicat seniorilor</span>
+    </div>
+
+</div>
+</div>
+
+<section class="section" id="servicii">
+<div class="container">
+
+    <div class="section-title">
+        <span>Soluții integrate</span>
+        <h2>Nu pornim de la un serviciu. Pornim de la om.</h2>
+        <p>
+            Nevoile se schimbă în timp. Fundația Nicoleta reunește soluții
+            care pot însoți seniorul de la primele nevoi de sprijin până
+            la îngrijire permanentă.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <article class="card">
+            <div class="number">01 · ACASĂ</div>
+            <h3>Seniori Acasă</h3>
+            <p>
+                Sprijin personalizat pentru seniorii care doresc să rămână
+                în mediul lor familiar, în siguranță și cu cât mai multă
+                independență.
+            </p>
+            <a href="#contact">Descoperă serviciul →</a>
+        </article>
+
+        <article class="card" id="rezidenta">
+            <div class="number">02 · REZIDENȚĂ</div>
+            <h3>Rezidența Seniorilor Sfântul Laurențiu</h3>
+            <p>
+                Un concept boutique premium, creat pentru seniorii care au
+                nevoie de supraveghere, confort, asistență și un mediu
+                cald, cu atmosferă de acasă.
+            </p>
+            <a href="#contact">Descoperă rezidența →</a>
+        </article>
+
+        <article class="card" id="shop">
+            <div class="number">03 · SOLUȚII</div>
+            <h3>Shop Seniori</h3>
+            <p>
+                Produse și soluții specializate pentru îngrijire,
+                mobilitate, confort și siguranță, dedicate seniorilor
+                și familiilor lor.
+            </p>
+            <a href="#contact">Descoperă Shop Seniori →</a>
+        </article>
+
+    </div>
+</div>
+</section>
+
+<section class="philosophy">
+<div class="container">
+    <div class="eyebrow" style="color:#5c4a2e;">Filosofia noastră</div>
+
+    <blockquote>
+        „Îngrijirea adevărată înseamnă să vezi omul înaintea nevoii sale.”
+    </blockquote>
+</div>
+</section>
+
+<section class="section section-dark">
+<div class="container grid2">
+
+    <div>
+        <div class="eyebrow">Rezidența Seniorilor Sfântul Laurențiu</div>
+
+        <h2 class="big-title">
+            Mai mult decât îngrijire. Un loc în care seniorul contează.
+        </h2>
+
+        <p class="text">
+            Rezidența Seniorilor Sfântul Laurențiu este construită în jurul
+            unei idei simple: un senior nu trebuie să renunțe la demnitate,
+            confort și apropiere atunci când are nevoie de mai mult sprijin.
+        </p>
+    </div>
+
+    <div class="features">
+
+        <div class="feature">
+            <strong>24/7</strong>
+            <span>Îngrijire și supraveghere permanentă</span>
+        </div>
+
+        <div class="feature">
+            <strong>Premium</strong>
+            <span>Camere și spații concepute pentru confort</span>
+        </div>
+
+        <div class="feature">
+            <strong>Personalizat</strong>
+            <span>Servicii adaptate gradului de dependență</span>
+        </div>
+
+        <div class="feature">
+            <strong>Activ</strong>
+            <span>Kineto, socializare și stimulare cognitivă</span>
+        </div>
+
+        <div class="feature">
+            <strong>Familial</strong>
+            <span>Atmosferă caldă și capacitate atent gestionată</span>
+        </div>
+
+        <div class="feature">
+            <strong>Siguranță</strong>
+            <span>Monitorizare și echipă multidisciplinară</span>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<section class="section section-soft" id="despre">
+<div class="container grid2">
+
+    <div>
+        <div class="section-title">
+            <span>Despre noi</span>
+            <h2>Continuitate în îngrijirea seniorilor.</h2>
+        </div>
+    </div>
+
+    <div class="about-box">
+        <p>
+            Fundația Nicoleta dezvoltă servicii dedicate persoanelor
+            vârstnice și familiilor care caută soluții sigure,
+            profesioniste și umane.
+        </p>
+
+        <p>
+            Credem că fiecare etapă a vieții merită respect, iar fiecare
+            familie trebuie să poată găsi sprijinul potrivit atunci când
+            are nevoie de el.
+        </p>
+
+        <p>
+            De aceea reunim îngrijirea la domiciliu, serviciile rezidențiale
+            și soluțiile specializate într-un sistem coerent de sprijin.
+        </p>
+    </div>
+
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+
+    <div class="section-title">
+        <span>Principiile noastre</span>
+        <h2>Standardele care ne definesc.</h2>
+    </div>
+
+    <div class="values">
+
+        <div class="value">
+            <h3>Demnitate</h3>
+            <p>
+                Respectăm povestea, personalitatea și alegerile fiecărui senior.
+            </p>
+        </div>
+
+        <div class="value">
+            <h3>Siguranță</h3>
+            <p>
+                Construim servicii în care familiile pot avea încredere.
+            </p>
+        </div>
+
+        <div class="value">
+            <h3>Apropiere</h3>
+            <p>
+                Îngrijirea înseamnă și prezență, răbdare și comunicare.
+            </p>
+        </div>
+
+        <div class="value">
+            <h3>Continuitate</h3>
+            <p>
+                Adaptăm sprijinul pe măsură ce nevoile seniorului evoluează.
+            </p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<section class="cta" id="contact">
+<div class="container">
+
+    <h2>Hai să găsim împreună soluția potrivită.</h2>
+
+    <p>
+        Fiecare situație este diferită. Discutăm nevoile seniorului și ale
+        familiei și identificăm forma de sprijin potrivită.
+    </p>
+
+    <a href="tel:+40746898421">Sună pentru informații</a>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+
+    <div class="footer-grid">
+
+        <div>
+            <h3>Fundația Nicoleta</h3>
+            <p>
+                Servicii integrate de îngrijire și sprijin pentru seniori
+                și familiile lor.
+            </p>
+        </div>
+
+        <div>
+            <h3>Servicii</h3>
+            <div class="footer-links">
+                <a href="#servicii">Seniori Acasă</a>
+                <a href="#rezidenta">Rezidența Sfântul Laurențiu</a>
+                <a href="#shop">Shop Seniori</a>
+            </div>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <div class="footer-links">
+                <a href="tel:+40746898421">0746 898 421</a>
+                <a href="/">fundatianicoleta.ro</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Fundația Nicoleta · Toate drepturile rezervate
+    </div>
+
+</div>
+</footer>
+
+</body>
+</html>      scroll-behavior: smooth;
     }
 
     body {
