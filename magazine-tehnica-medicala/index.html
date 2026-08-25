@@ -197,6 +197,9 @@ footer a{
 }
 
 @media(max-width:800px){
+  .grid:not(:has(img)){
+  grid-template-columns:1fr;
+  }
   .grid:has(img){
     grid-template-columns:repeat(2,1fr);
 gap:12px;
