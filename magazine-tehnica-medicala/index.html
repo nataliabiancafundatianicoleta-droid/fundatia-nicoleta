@@ -197,10 +197,10 @@ footer a{
 }
 
 @media(max-width:800px){
-  .grid{
+  .grid:has(img){
     grid-template-columns:repeat(2,1fr);
 gap:12px;
-  }.grid img{
+  }.grid:has(img) img{
   width:100%;
   aspect-ratio:4/3;
   object-fit:cover;
